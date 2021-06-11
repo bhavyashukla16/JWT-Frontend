@@ -1,0 +1,20 @@
+GET http://localhost:5000/api/userDetails
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImJoYXZ5YUBlbWFpbC5jb20iLCJwYXNzd29yZCI6InBhc3N3b3JkIiwiaWF0IjoxNjIzMzk5NTgyLCJleHAiOjE2MjMzOTk4ODJ9.TeVeSRhu4OY331DeaqqwjOYnZ5jpN9ScixSkyx5tCfI
+
+POST http://localhost:5000/users
+Content-Type: application/json
+
+{
+    "name": "Bhavya",
+    "password": "password"
+}
+
+###
+
+POST http://localhost:5000/
+Content-Type: application/json
+
+{
+    "email": "bhavya@email.com",
+    "password": "password"
+}
