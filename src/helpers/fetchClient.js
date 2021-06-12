@@ -3,7 +3,7 @@ import Axios from 'axios'
 const fetchClient = () => {
     const accessToken = localStorage.getItem('token')
     const instance = Axios.create({
-        baseUrl: 'http://localhost:5000/api',
+        baseUrl: 'https://jwt-login-backend.herokuapp.com/',
     })
 
     instance.interceptors.request.use(

@@ -11,7 +11,14 @@ const Details = () => {
         setLoading(false);
         Axios.get('http://localhost:5000/api/userDetails')
         .then((response) => {
+            if(response.data.success === 0) {
+                window.alert(response.data.message)
+                if(response.data.message === 'Session expired') {
+                    window.location = '/';
+            }}
+            else {
             setUsersList(response.data);
+            }
         })
         .catch((err) => console.log(err))
         .finally(() => setLoading(true))
@@ -25,10 +32,9 @@ const Details = () => {
         .then((response) => {
             if(response.data.success === 0) {
                 window.alert(response.data.message)
-            } 
-            else if(response.data.message === 'Session expired') {
-                window.location = '/';
-            }
+                if(response.data.message === 'Session expired') {
+                    window.location = '/';
+            }}
             else {
             setUsersList(usersList.filter(user => user.user_id!==id ))
             }
