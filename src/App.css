@@ -1,0 +1,39 @@
+.container {
+  margin: 10% auto;
+  padding: 10px 0;
+  text-align: center;
+}
+
+.container h1 {
+  font-size: 40px;
+  font-weight: 200;
+  margin: 20px auto;
+}
+
+input {
+  border: 1px solid rgba(252, 252, 252, 0.4);
+  background-color: rgba(220, 220, 220, 0.1);
+  width: 280px;
+  border-radius: 3px;
+  font-family: 'Quicksand', sans-serif;
+  padding: 10px 15px;
+  margin: 0 auto 10px auto;
+  display: block;
+  text-align: center;
+  font-size: 18px;
+  color: white;
+  font-weight: 570;
+}
+
+button {
+  appearance: none;
+  outline: 0;
+  background-color: #50a3a2;
+  border: 0;
+  padding: 10px 15px;
+  color: white;
+  border-radius: 3px;
+  width: 280px;
+  font-size: 18px;
+  font-family: 'Quicksand', sans-serif;
+}
