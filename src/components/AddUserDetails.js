@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-import client from '../helpers/fetchClient'
+import Axios from '../helpers/fetchClient'
 var Loader = require('react-loader');
 
 const AddUserDetails = () => {
@@ -24,7 +24,7 @@ const AddUserDetails = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
         setLoading(false);
-        client.post('/api/addUser', {
+        Axios.post('https://jwt-login-backend.herokuapp.com/api/addUser', {
         username: detials.username,
         mobile_no: detials.mobile_no,
         email: detials.email,
