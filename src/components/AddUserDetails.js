@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-import Axios from '../helpers/fetchClient'
+import client from '../helpers/fetchClient'
 var Loader = require('react-loader');
 
 const AddUserDetails = () => {
@@ -24,7 +24,7 @@ const AddUserDetails = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
         setLoading(false);
-        Axios.post('http://localhost:5000/api/addUser', {
+        client.post('/api/addUser', {
         username: detials.username,
         mobile_no: detials.mobile_no,
         email: detials.email,

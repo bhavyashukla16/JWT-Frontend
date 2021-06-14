@@ -9,7 +9,7 @@ const Details = () => {
 
     useEffect(() => {
         setLoading(false);
-        Axios.get('http://localhost:5000/api/userDetails')
+        Axios.get('https://jwt-login-backend.herokuapp.com/api/userDetails')
         .then((response) => {
             if(response.data.success === 0) {
                 window.alert(response.data.message)
@@ -26,7 +26,7 @@ const Details = () => {
 
     const handleDelete = (id) => {
         setLoading(false);
-        Axios.post('http://localhost:5000/api/deleteUser', {
+        Axios.post('https://jwt-login-backend.herokuapp.com/api/deleteUser', {
         id: id
         })
         .then((response) => {

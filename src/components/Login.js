@@ -20,7 +20,7 @@ const Login = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     setLoading(false);
-    Axios.post('http://localhost:5000/', {
+    Axios.post('https://jwt-login-backend.herokuapp.com/', {
       email: credentials.email,
       password: credentials.password
     })
