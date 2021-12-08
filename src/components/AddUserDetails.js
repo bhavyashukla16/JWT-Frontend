@@ -24,7 +24,8 @@ const AddUserDetails = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
         setLoading(false);
-        Axios.post('https://jwt-login-backend.herokuapp.com/api/addUser', {
+        //Axios.post('https://jwt-login-backend.herokuapp.com/api/addUser', {
+        Axios.post('http://localhost:5000/api/addUser', {
         username: detials.username,
         mobile_no: detials.mobile_no,
         email: detials.email,
